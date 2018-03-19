@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<title>Sin título</title>
+<!--Adobe Edge Runtime-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<script>
+	var custHtmlRoot=""; 
+	var script = document.createElement('script'); 
+	script.type= "text/javascript";
+script.src = custHtmlRoot+"edge_includes/edge.5.0.1.min.js";
+	var head = document.getElementsByTagName('head')[0], done=false;
+	script.onload = script.onreadystatechange = function(){
+		if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+			done=true;
+			var opts ={
+    scaleToFit: "width",
+    centerStage: "horizontal",
+    minW: "0",
+    maxW: "undefined",
+    width: "900px",
+    height: "400px"
+};
+			opts.htmlRoot =custHtmlRoot;
+			AdobeEdge.loadComposition('edge', 'booksedge', opts,
+			{"style":{"${symbolSelector}":{"isStage":"true","rect":["undefined","undefined","900px","400px"],"fill":["rgba(255,255,255,1)"]}},"dom":[{"rect":["408","158","85px","85px","auto","auto"],"id":"preloader1","fill":["rgba(0,0,0,0)","images/preloader1.gif","0px","0px"],"type":"image","tag":"img"}]}, {"style":{"${symbolSelector}":{"isStage":"true","rect":["undefined","undefined","900px","400px"],"fill":["rgba(255,255,255,1)"]}},"dom":{}});		
+			script.onload = script.onreadystatechange = null;
+			head.removeChild(script);
+		}
+	};
+	head.appendChild(script);
+	</script>
+	
+	    <style>
+        .edgeLoad-booksedge { visibility:hidden; }
+    </style>
+
+<!--Adobe Edge Runtime End-->
+
+</head>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="booksedge">
+	</div>
+</body>
+</html>

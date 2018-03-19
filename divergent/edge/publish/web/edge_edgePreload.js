@@ -1,0 +1,4 @@
+
+(function(comp){"use strict";var preloaderDOM={dom:[{rect:['408','158','85px','85px','auto','auto'],id:'preloader1',fill:['rgba(0,0,0,0)','images/preloader1.gif','0px','0px'],type:'image',tag:'img'}],style:{'${symbolSelector}':{isStage:'true',rect:[undefined,undefined,'900px','400px'],fill:['rgba(255,255,255,1)']}}}
+comp.definePreloader(preloaderDOM);}(AdobeEdge.getComposition("booksedge")));(function(comp){"use strict";var downLevelStageDOM={dom:[],style:{'${symbolSelector}':{isStage:'true',rect:[undefined,undefined,'900px','400px'],fill:['rgba(255,255,255,1)']}}}
+comp.defineDownLevelStage(downLevelStageDOM);}(AdobeEdge.getComposition("booksedge")));

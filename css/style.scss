@@ -1,0 +1,147 @@
+@import 'fonts/ostrich/stylesheet.css';
+@import 'fonts/montserrat/stylesheet.css';
+
+$ostrich: 'Ostrich Black', sans-serif;
+$montserrat-light: 'Montserrat Light', sans-serif;
+$montserrat-regular: 'Montserrat Regular', sans-serif;
+$montserrat-bold: 'Montserrat Bold', sans-serif;
+
+$text-color: #212121;
+$purple: #58436a;
+$emerald: #5cc3c7;
+
+
+* { box-sizing: border-box; }
+body { font-size: 12px; color: $text-color; }
+a { text-decoration: none; }
+
+.main-container {
+	width: 960px;
+	margin: 50px auto 0;
+}
+
+.main-header {
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-family: $ostrich;
+    font-size: 6em;
+    text-transform: uppercase;
+    line-height: 0.8em;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    font-family: $montserrat-light;
+    font-size: 1.5em;
+    color: $purple;
+    letter-spacing: -1px;
+
+    span {
+      display: inline-block;
+      margin: 0 5px;
+      color: $emerald;
+    }
+  }
+
+  .main-nav {
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .line {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #eeeeee;
+    }
+
+    li {
+      z-index: 2;
+      margin: 0 10px;
+      background-color: $purple;
+      transition: 150ms linear;
+
+      a {
+        display: block;
+        padding: 5px 10px;
+        font-family: $ostrich;
+        font-size: 1.5em;
+        color: white;
+        letter-spacing: 1px;
+      }
+
+      &[class~="active"] {
+        background-color: darken($purple, 10%);
+        &:hover { cursor: default; }
+      }
+
+      &:not(.active):hover {
+        background-color: $emerald;
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+::-webkit-scrollbar {width: 15px;}
+::-webkit-scrollbar-track { background-color: #fff; }
+::-webkit-scrollbar-thumb {
+  background-color: #5cc3c7;
+  border: 5px #fff solid;
+}
+::-webkit-scrollbar-track:vertical { width: 3px; }
+::-webkit-scrollbar-track:horizontal { height: 3px; }
+
+.content { margin: 50px 0; }
+
+.project {
+  width: 80%;
+  margin: 25px auto 80px;
+
+  .description {
+
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      font-family: $montserrat-light;
+      font-size: 1.4em;
+      color: $purple;
+      text-align: left;
+
+      &::before {
+        content: '›';
+        margin-right: 10px;
+        color: $emerald;
+      }
+    }
+
+    .year {
+      flex-grow: 1;
+      font-family: $ostrich;
+      color: $text-color;
+      text-align: right;
+    }
+
+    p {
+      margin: 5px 0 0 15px;
+      font-family: $montserrat-light;
+      color: lighten(#212121, 10%);
+    }
+
+  }
+
+}
+
+img {
+	margin: 35px 0 0 0;
+	width: 100%;
+}
