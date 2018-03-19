@@ -2,8 +2,7 @@
 @import url(fonts/ostrich/stylesheet.css);
 @import url(fonts/montserrat/stylesheet.css);
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 body {
   font-size: 12px;
@@ -28,7 +27,7 @@ a {
     margin-bottom: 40px;
     font-family: "Montserrat Light", sans-serif;
     font-size: 1.5em;
-    color: #58436a;
+    color: #727272;
     letter-spacing: -1px; }
     .main-header h2 span {
       display: inline-block;
@@ -37,15 +36,9 @@ a {
   .main-header .main-nav {
     list-style: none;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    justify-content: center;
+    align-items: center; }
     .main-header .main-nav .line {
       position: absolute;
       z-index: 1;
@@ -57,7 +50,6 @@ a {
       z-index: 2;
       margin: 0 10px;
       background-color: #58436a;
-      -webkit-transition: 150ms linear;
       transition: 150ms linear; }
       .main-header .main-nav li a {
         display: block;
@@ -72,8 +64,7 @@ a {
           cursor: default; }
       .main-header .main-nav li:not(.active):hover {
         background-color: #5cc3c7;
-        -webkit-transform: scale(1.05);
-                transform: scale(1.05);
+        transform: scale(1.05);
         cursor: pointer; }
 
 ::-webkit-scrollbar {
@@ -99,12 +90,8 @@ a {
   width: 80%;
   margin: 25px auto 80px; }
   .project .description h3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     margin: 0;
     font-family: "Montserrat Light", sans-serif;
     font-size: 1.4em;
@@ -115,9 +102,7 @@ a {
       margin-right: 10px;
       color: #5cc3c7; }
   .project .description .year {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     font-family: "Ostrich Black", sans-serif;
     color: #212121;
     text-align: right; }
