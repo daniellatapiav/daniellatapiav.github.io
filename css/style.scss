@@ -16,7 +16,8 @@ body { font-size: 12px; color: $text-color; }
 a { text-decoration: none; }
 
 .main-container {
-	width: 960px;
+	width: 80%;
+	max-width: 960px;
 	margin: 50px auto 0;
 }
 
@@ -26,7 +27,8 @@ a { text-decoration: none; }
   h1 {
     margin: 0;
     font-family: $ostrich;
-    font-size: 6em;
+    font-size: 5.5em;
+		letter-spacing: 0.1em;
     text-transform: uppercase;
     line-height: 0.8em;
   }
@@ -34,13 +36,13 @@ a { text-decoration: none; }
   h2 {
     margin-bottom: 40px;
     font-family: $montserrat-light;
-    font-size: 1.5em;
-    color: #727272;
-    letter-spacing: -1px;
+    font-size: 1.4em;
+    color: #666666;
 
     span {
       display: inline-block;
       margin: 0 5px;
+			font-size: 0.7em;
       color: $emerald;
     }
   }

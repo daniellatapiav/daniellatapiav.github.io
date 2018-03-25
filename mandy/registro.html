@@ -81,26 +81,78 @@
 
 		</header>
 
-
     <div class="page-container login-registro-content">
-
       <div class="titulo-registro">
-          <h3>Registro</h3>
+        <h3>Registro</h3>
       </div>
 
-      <form class="form-login-registro" action="" method="post">
+      <form class="form-login-registro" method="post" action="">
 
-        <input type="text" class="user" name="user" placeholder="Usuario" required><br>
-        <input type="email" class="email" name="e-mail" placeholder="Correo electrónico" required><br>
-        <input type="password" class="password" name="password" placeholder="Contraseña" required><br>
-        <input type="password" class="repassword" name="repassword" placeholder="Reingresar contraseña" required>
+        <div class="two-input-wrapper">
+          <input id="first_name" type="text" name="first_name" data-nombre="nombre" placeholder="Nombre" autofocus>
+          <span class="error">
+            <span class="ion-close"></span>
+            <span class="error-js"></span>
+          </span>
+          <input id="last_name" type="text" name="last_name" data-nombre="apellido" placeholder="Apellido" autofocus>
+          <span class="error">
+            <span class="ion-close"></span>
+            <span class="error-js"></span>
+          </span>
+        </div>
 
-        <button class="boton-registrarme" type="button" name="button">Registrarme</button>
+        <input id="username" type="text" name="username" data-nombre="usuario" placeholder="Usuario" autofocus>
+        <span class="error">
+          <span class="ion-close"></span>
+          <span class="error-js"></span>
+        </span>
+
+        <input id="email" type="email" name="email" data-nombre="e-mail" placeholder="Correo electrónico">
+        <span class="error">
+          <span class="ion-close"></span>
+          <span class="error-js"></span>
+        </span>
+
+        <select id ="selectPaises" name="country">
+          <option value="" selected disabled>Elige un país</option>
+        </select>
+        <span class="error">
+          <span class="ion-close"></span>
+          <span class="error-js"></span>
+        </span>
+
+        <select id ="selectProvincias" name="province">
+          <option value="" selected disabled>Elige una provincia</option>
+        </select>
+        <span class="error">
+          <span class="ion-close"></span>
+          <span class="error-js"></span>
+        </span>
+
+        <select id ="selectCiudades" name="city">
+          <option value="" selected disabled>Elige una ciudad</option>
+        </select>
+        <span class="error">
+          <span class="ion-close"></span>
+          <span class="error-js"></span>
+        </span>
+
+        <input id="password" type="password" name="password" data-nombre="contraseña" placeholder="Contraseña">
+        <span class="error">
+          <span class="ion-close"></span>
+          <span class="error-js"></span>
+        </span>
+
+        <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirmar contraseña">
+
+        <button type="submit">Registrarme</button>
 
       </form>
 
     </div>
 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
 
   </body>
 </html>

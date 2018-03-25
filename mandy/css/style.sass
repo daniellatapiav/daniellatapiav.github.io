@@ -59,6 +59,7 @@ form input[type=submit]
   color: #fff
   background-color: $celeste-2
   border: 0px
+  border-radius: 0px
   transition: 250ms
 
 form input[type=submit]:hover
@@ -72,7 +73,7 @@ form input[type=submit]:hover
   width: 100vw
   top: 0
   padding: 2em
-  overflow: hidden
+  overflow: visible
   display: flex
   justify-content: space-between
   align-items: center
@@ -84,6 +85,7 @@ h1
   padding: 0
   text-transform: uppercase
   transition: 350ms
+  order: 0
 
 h1:hover
   text-shadow: $sombras-fondo-claro
@@ -121,9 +123,10 @@ h1:hover
   font-size: 3em
   color: $gris-4
   cursor: pointer
+  transition: 150ms
 
 .toggle-nav:hover, .top-search:hover, .close-nav:hover, .shopping-bag:hover
-  color: $celeste-2!important
+  color: $celeste-3!important
 
 
 // MENÚ DESPLEGABLE
@@ -138,25 +141,53 @@ h1:hover
   margin-right: 0.5em
   color: #fff!important
 
+.user-avatar
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid $gris-1
+  box-shadow: 1px 0px 0px $gris-1
 
-.registro-mobile
+  img
+    width: 100%
+
+.links-mobile
+  margin-top: 8em
   margin-left: 2em
   display: flex
   align-items: center
+  justify-content: center
+  clear: both
 
-.registro-mobile a
-  display: inline-block
-  font-size: 1.5em
-  color: #fff
+  a
+    display: inline-block
+    font-size: 1.5em
+    color: #fff
 
   u
     display: block
     margin: 5px 0 0
 
   u:hover
-    color: $celeste-2
+    color: $celeste-3
+
+  .user-avatar
+    height: 60px
+    width: 60px
+    border-radius: 30px
+    margin-right: 20px
+
+  .user-display
+    font-size: 2em
+    line-height: 1.3em
+    display: block
+
+    a
+      font-size: 1em
 
 .log-in-mobile
+  color: #ffffff
   background-color: $celeste-2
   padding: 1em 2em
   margin-right: 20px
@@ -178,33 +209,57 @@ h1:hover
   padding-top: 2em
   overflow: hidden
   background-color: $gris-4
+  color: #fff!important
   transition: 350ms
   z-index: 10
+  order: 2
 
   ul
-    margin: 5em 0 3em
-    position: relative
+    margin: 3em 0 3em
+    padding: 0
 
-  ul a
-    padding: 1em
-    display: block
-    font-size: 1.5em
-    text-transform: uppercase
-    text-align: left
-    color: #fff
-    border-bottom: solid 1px #fff
+    li a
+      display: block
+      padding: 1em
+      border-bottom: solid 1px #fff
+      font-size: 1.5em
+      text-transform: uppercase
+      text-align: left
+      color: #fff
+      transition: 350ms
 
-  ul li a
-    transition: 350ms
+    li a:hover
+      padding-left: 2em
+      background-color: $celeste-3
+      text-shadow: 1px 1px 0px $gris-3
+      transition: 350ms
 
-  ul li:hover a
-    padding-left: 2em
-    background-color: $celeste-2
-    text-shadow: 1px 1px 0px $gris-3
-    transition: 350ms
+    li a.categories::after
+      content: "▾"
+      margin-left: 10px
+
+    li ul
+      top: 0
+      margin: 0
+      padding: 0
+      // display: none
+      transform: scale(1,0)
+      height: 0
+      transform-origin: top center
+      transition: 350ms
+
+      li a::before
+        content: "›"
+        margin-right: 10px
+
+    li:hover ul
+      // display: block
+      height: auto
+      transform: scale(1,1)
 
 .links-desktop
   display: none
+
 
 // INTRO
 
@@ -242,6 +297,7 @@ h1:hover
 
   form input[type=submit]:hover
     background-color: $celeste-3
+    text-shadow: 1px 1px 0px $gris-3
 
 .main-container h2
   margin: inherit auto
@@ -312,7 +368,6 @@ h1:hover
 // SECCIONES
 
 .main-container
-  padding-bottom: 50px
   background-color: #fff
 
 .seccion
@@ -337,7 +392,9 @@ section.fondo-gris
   transition: 350ms
 
 .ver-mas:hover
-  background-color: $celeste-2
+  background-color: $celeste-3
+  text-shadow: 1px 1px 0px $gris-3
+  border-color: $celeste-3
   color: #fff
   transition: 350ms
 
@@ -418,6 +475,7 @@ h4:hover
   letter-spacing: 1px
   background-color: $celeste-3
   color: #fff
+  background-color: 20
 
 
 .artista h5
@@ -519,19 +577,20 @@ h6
 
   form input[type=submit]:hover
     background-color: $celeste-3
-
+    text-shadow: 1px 1px 0px $gris-3
 
 // LOG-IN Y REGISTRO
 
 .page-container
   width: 85vw
   padding: 50px
-  margin: 120px auto
+  margin: 120px auto 50px
   background-color: #fff
   color: $gris-4!important
 
 .login-registro-content
   max-width: 800px!important
+  overflow: hidden
 
 .titulo-login, .titulo-registro
   position: relative
@@ -560,14 +619,21 @@ h6
 
 .form-login-registro
   display: block
+  max-width: 450px
   margin: auto
   text-align: center
 
-  .email, .user, .password, .repassword
+  h3
+    font-size: 2em
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select
     font-size: 1.5em
-    max-width: 450px
     width: 100%
     border: solid 2px $gris-3!important
+    border-radius: 3px
     padding: 12px 20px
     margin: 10px 0
     outline: none
@@ -575,10 +641,22 @@ h6
     text-align: left!important
     font-family: $main-font
 
+  .img_profile
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+  select
+    height: 40px
+
   .adicionales-login
     margin: 20px 0
     font-size: 1.3em
     line-height: 1.8em
+    text-align: center
 
   .adicionales-login label
     display: block
@@ -587,26 +665,66 @@ h6
     text-decoration: underline
     color: black
 
-  .boton-ingresar, .boton-registrate, .boton-registrarme
+  .input-label
+    display: inline-block
+    margin: 15px 0 5px
+    font-size: 1.6em
+    font-weight: 700
+
+  button, .img_profile + label
     background-color: $celeste-2
     font-family: $alt-font-2
     font-weight: 700
     border: 0px
+    border-radius: 0
     color: white
     padding: 1em 2em
     text-align: center
     font-size: 1.5em
     text-transform: uppercase
-    margin: 0.5em auto
+    margin: 25px auto 0
     letter-spacing: 2px
     cursor: pointer
     display: block
 
+  button:hover
+    background-color: $celeste-3
+    text-shadow: 1px 1px 0px $gris-3
+    transition: 150ms
+
+  .img_profile + label
+    font-size: 1em
+    display: inline-block
+    width: 100%
+    margin: 10px 0
+    padding: 12px
+    background-color: $gris-3
+
   .boton-registrate
     background-color: #000
     font-size: 1.2em!important
+    margin-top: 10px
 
+  .boton-registrate:hover
+    background-color: $gris-3!important
 
+  .boton-registrarme
+    margin-top: 50px
+
+  span.error
+    color: #d10404
+    text-align: center
+    font-size: 1.3em
+    border-top: dotted #d10404 1px
+    display: block
+    margin: 0 auto 10px
+    max-width: 450px
+    width: 100%
+    padding-top: 5px
+
+    .ion-close
+      margin-right: 5px
+      font-size: 0.8em
 
 // PREGUNTAS FRECUENTES
 
@@ -672,6 +790,72 @@ h6
 .abrir-pregunta:checked ~ .pregunta .ion-minus
   display: inline
 
+// PERFIL DE USUARIO
+
+.img_perfil_container
+  padding: 15px
+  text-align: center
+
+.imagen-perfil
+  width: 150px
+  height: 150px
+  border-radius: 75px
+  border: solid 1px $gris-1
+  box-shadow: 0 0 5px $gris-1
+  z-index: 3
+
+.perfil-view
+  padding: 0 15px
+  text-align: center
+  font-size: 1.6em
+  line-height: 1.8em
+
+  p
+    margin: 25px 0
+
+.clearfix
+  clear: both
+
+a.boton-modificar, button.boton-modificar
+  background-color: $celeste-2
+  font-family: $alt-font-2
+  font-weight: 700
+  border: 0px
+  color: white
+  padding: 1em 2em
+  text-align: center
+  font-size: 1.5em
+  text-transform: uppercase
+  margin: 25px auto 0
+  letter-spacing: 2px
+  cursor: pointer
+  display: inline-block
+
+a.boton-modificar:hover, button.boton-modificar:hover
+  background-color: $celeste-3
+  text-shadow: 1px 1px 0px $gris-3
+  transition: 150ms
+
+a.boton-imagen
+  font-size: 1em
+  display: inline-block
+  width: 100%
+  margin: 10px 0
+  padding: 12px
+  background-color: $gris-3!important
+  transition: 350ms
+
+a.boton-imagen:hover
+  background-color: $gris-4!important
+
+// BASE DE DATOS
+
+.bdResult
+  font-size: 2em
+  margin-top: 50px
+  font-weight: 600
+  color: $celeste-2
+
 
 
 @media(min-width: 600px)
@@ -727,10 +911,10 @@ h6
   .shopping-bag, .sb-desktop
     display: inline-block
 
-  .toggle-nav, .close-nav, .registro-mobile, .sb-mobile
+  .toggle-nav, .close-nav, .links-mobile, .sb-mobile
     display: none
 
-  .registro-desktop a, .shopping-bag, .top-search
+  .shopping-bag, .top-search
     color: $gris-4!important
 
   .icon-nav
@@ -739,20 +923,18 @@ h6
     display: flex
     justify-content: space-between
     align-items: center
+    order: 3
 
   #open-search:checked ~ .top-searchbar
     display: block
     float: left
     width: 50%
     order: 1
-    z-index: -1
+    z-index: 3
 
   #open-search:checked ~ .links-desktop,
   #open-search:checked ~ .shopping-bag
     display: none
-
-  .links-desktop
-    font-size: 1.5em
 
   .main-nav
     position: static
@@ -760,48 +942,112 @@ h6
     height: auto
     background-color: transparent
     padding: 0 2em
-    display: flex
-    justify-content: space-between
 
     ul
       margin: 0
       width: auto
       overflow: visible
-      display: inline-block
+      display: flex
 
-    ul li
-      display: inline-block
+      li a
+        padding: 0 inherit
+        border-bottom: 0px
+        text-align: center
+        color: $gris-4
 
-    ul a
-      text-align: center
-      color: $gris-4
-      padding: 0 inherit
-      border-bottom: 0px
-      transition: 350ms
+      li a:hover
+        text-shadow: 1px 1px 0px $celeste-1
+        transform: scale(1.05)
+        padding-left: 1em
+        background-color: transparent
 
-    ul li:hover a
-      text-shadow: 1px 1px 0px $celeste-1
-      transform: scale(1.05)
-      padding-left: 1em
-      background-color: transparent
+      li:nth-child(6)
+        display: none
 
-  .top-search
-    order: 1
-    margin: 0 20px
+      li ul
+        top: auto
+        transform: scale(1,0)
+        display: flex
+        flex-flow: column nowrap
+        transform-origin: top center
+        position: absolute
+        background: #ffffff
+        transition: 350ms
 
-  .shopping-bag
-    order: 2
+        li a
+          letter-spacing: 2px
+          text-transform: capitalize
+
+        li a::before
+          content: ""
+          margin-right: 0
+
+        li a:hover
+          padding-left: 1em
+          background-color: transparent
+          transform: none
+
+      li:hover ul
+        transform: scale(1,1)
+
 
   .links-desktop
-    display: inline-block
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    font-size: 1.5em
     width: auto
     order: 1
+    transition: 150ms
 
     a
-      color: $celeste-3
+      color: $celeste-2
 
-    a:last-child
+    a.log-in-desktop
       color: #fff!important
+
+    .user-avatar
+      height: 32px
+      width: 32px
+      border-radius: 16px
+      margin-right: 10px
+      display: inline-flex
+      z-index: 2
+
+  .user-display
+    z-index: 2
+    background-color: #fff
+
+  .links-desktop:hover .user-menu,
+  .user-menu:hover .user-menu
+    height: 120px
+
+  .user-menu
+    height: 0
+    top: 0
+    position: absolute
+    padding-top: 40px
+    overflow: hidden
+    width: 100%
+    color: $gris-4!important
+    transition: 180ms ease-in
+    transform-origin: left top
+    z-index: 1
+
+    li
+      background-color: #fff
+      border-bottom: 1px solid $gris-1
+
+    li a
+      display: block
+      padding: 10px 20px
+      color: $gris-4!important
+      transition: color 150ms
+
+    li a:hover
+      text-decoration: none
+      color: $celeste-3!important
 
   .log-in-desktop
     padding: 5px 10px
@@ -811,6 +1057,18 @@ h6
   .links-desktop a:hover
     text-decoration: underline
 
+  .top-search
+    margin: 0 20px
+    order: 2
+
+  .shopping-bag
+    order: 3
+
+
+  .registro-mobile
+    display: none
+
+  // SECCIONES
 
   .about
     padding: 100px 200px
@@ -846,3 +1104,33 @@ h6
 
   .respuesta
     font-size: 1.5em
+
+  .form-login-registro
+    text-align: left
+
+    .two-input-wrapper
+      display: inline-flex
+      width: 100%
+      justify-content: space-between
+
+      .input-container
+        display: inline-block
+        width: 48%
+
+      .name, .surname
+        margin: inherit 0
+
+    .img_profile + label
+      width: auto
+      margin: 10px 15px
+      padding: 8px 20px
+
+  .img_perfil_container
+    text-align: right
+    width: 40%
+    float: left
+
+  .perfil-view
+    width: 60%
+    text-align: left
+    float: right
