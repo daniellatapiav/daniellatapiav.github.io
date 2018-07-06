@@ -9,68 +9,108 @@
 
   <body>
 
-    <div class="main-container">
+    <header class="main-header" id="#index">
+      <ul class="main-nav">
+        <li>
+          <a href="#index">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            Acerca de mí
+          </a>
+        </li>
+        <li>
+          <a href="#projects">
+            Proyectos
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            Contacto
+          </a>
+        </li>
+      </ul>
+      <h1>Daniella Tapia Villanes</h1>
+      <h2>
+        diseñadora ux
+        <span>/</span>
+        desarrolladora full-stack & android
+        <span>/</span>
+        digital product owner
+      </h2>
+    </header>
 
-      <header class="main-header">
-        <h1>Daniella Tapia Villanes</h1>
-        <h2>
-          diseñadora ux & ui
-          <span>/</span>
-          desarrolladora full-stack & android
-          <span>/</span>
-          digital product owner
-        </h2>
-        <ul class="main-nav">
-          <span class="line"></span>
-          <li class="active">
-            <a href="index.html">
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a href="about.html">
-              Currículum
-            </a>
-          </li>
-          <li>
-            <a href="contacto.html">
-              Contacto
-            </a>
-          </li>
-        </ul>
-      </header>
+    <section class="subsection" id="about">
 
-      <section class="content">
+      <h3 class="subtitle">
+        Acerca de mí
+      </h3>
+
+      <div class="content bio">
+        <img src="img/me.png" alt="Daniella Tapia Villanes">
+        <p>¡Hola! Soy una desarrolladora web y Android <b>especializada en front-end</b>, pero también sé de back-end. Además, cuento con certificaciones en diseño web, diseño de productos digitales (UX, UI y IxD) y marketing digital. Actualmente desempeño múltiples roles en un equipo de <b>Transformación Digital</b>, mientras curso una carrera de pregrado en <b>Ingeniería de Sistemas</b> durante los fines de semana. Soy proactiva, responsable y tengo muchas ganas de aprender.<br>
+        <a href="files/TapiaDaniella_CV18.png">Descargar mi CV</a></p>
+      </div>
+
+    </section>
+
+    <section class="subsection alternate" id="projects">
+
+      <h3 class="subtitle">
+        Proyectos
+      </h3>
+
+      <div class="content">
 
         <article class="project">
           <div class="description">
-            <h3>
+            <h4>
               Final de HTML5 Avanzado con CSS3
-              <span class="year">IPAD (2015)</span>
-            </h3>
-            <p>HTML y CSS 100% responsive. Uso de múltiples librerías open-source de JavaScript.</p>
+            </h4>
+            <span class="year">Instituto Peruano de Arte y Diseño (2015)</span>
           </div>
           <a href="divergent/index.html" target="_blank">
             <img src="img/IPAD.png" alt="Divergent site">
           </a>
+          <p>HTML y CSS responsive. Uso de múltiples librerías open-source de JavaScript.</p>
         </article>
 
         <article class="project">
           <div class="description">
-            <h3>
+            <h4>
               Proyecto de Desarrollo Web Full-Stack
-              <span class="year">Digital House (2017)</span>
-            </h3>
-            <p>Hecho en Laravel y con Sass. Validaciones con JQuery y PHP con guardado en base de datos.</p>
+            </h4>
+            <span class="year">Digital House Argentina (2017)</span>
           </div>
           <a href="mandy/index.html" target="_blank">
             <img src="img/DH.png" alt="Mandy">
           </a>
+          <p>Hecho en Laravel y con Sass. Validaciones con JQuery y PHP.</p>
         </article>
 
-      </section>
+      </div>
 
-    </div>
+    </section>
+
+    <section class="subsection" id="contact">
+      <div class="content contact">
+        <a href="mailto:d.tapiavillanes@gmail.com">
+          <img src="img/mail.png" alt="Mail">
+        </a>
+        <a href="https://www.linkedin.com/in/daniellatapiav/" target="_blank">
+          <img src="img/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.github.com/daniellatapiav" target="_blank">
+          <img src="img/github.png" alt="GitHub">
+        </a>
+      </div>
+      <p class="credit">© 2018, Daniella Tapia Villanes. Todos los derechos reservados</p>
+    </section>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
 
   </body>
 </html>

@@ -6,20 +6,18 @@
           box-sizing: border-box; }
 
 body {
+  width: 100vw;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: #333; }
+  color: #333;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none; }
 
-.main-container {
-  width: 80%;
-  max-width: 960px;
-  margin: 50px auto 0; }
-
 .main-header {
+  margin-top: 150px;
   text-align: center; }
   .main-header h1 {
     margin: 0;
@@ -31,15 +29,13 @@ a {
     margin-bottom: 40px;
     font-size: 1.4em;
     font-weight: 300;
-    color: #666666; }
+    color: #666; }
     .main-header h2 span {
       display: inline-block;
       margin: 0 5px;
       font-size: 0.7em;
       color: #00bbf0; }
   .main-header .main-nav {
-    list-style: none;
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -48,14 +44,9 @@ a {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
-    .main-header .main-nav .line {
-      position: absolute;
-      z-index: 1;
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: #272e4f; }
+            align-items: center;
+    margin: 50px inherit;
+    list-style: none; }
     .main-header .main-nav li {
       z-index: 2;
       margin: 0 10px;
@@ -70,7 +61,7 @@ a {
         text-transform: uppercase;
         color: #333;
         letter-spacing: 1px; }
-      .main-header .main-nav li:not(.active):hover {
+      .main-header .main-nav li:hover {
         text-shadow: 0.5px 0.5px 0px #fff, 1px 1px 0px #00bbf0;
         -webkit-transform: scale(1.08);
                 transform: scale(1.08);
@@ -92,42 +83,97 @@ a {
 ::-webkit-scrollbar-track:horizontal {
   height: 3px; }
 
-.content {
-  margin: 50px 0; }
-
-.project {
-  width: 80%;
-  margin: 25px auto 80px; }
-  .project .description h3 {
+.subsection {
+  width: 100vw;
+  padding: 150px 0; }
+  .subsection.alternate {
+    background-color: #efefef; }
+  .subsection .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: auto;
+    width: 80%;
+    max-width: 1200px; }
+
+h3.subtitle {
+  margin-top: 0;
+  margin-bottom: 80px;
+  font-size: 2.5em;
+  text-align: center; }
+  h3.subtitle::after {
+    display: block;
+    width: 80%;
+    border-bottom: 1px solid #333; }
+
+.bio p {
+  margin-left: 50px;
+  font-size: 1.5em;
+  line-height: 2em; }
+  .bio p a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 30px;
+    color: #0881a3;
+    border: 2px solid #0881a3; }
+.bio img {
+  width: 300px;
+  height: auto; }
+
+.project {
+  margin: auto;
+  width: 45%; }
+  .project .description h4 {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-size: 1.4em;
     font-weight: 400;
-    color: #07617d;
+    color: #333;
     text-align: left; }
-    .project .description h3::before {
+    .project .description h4::before {
       content: '›';
       margin-right: 10px;
       color: #00bbf0; }
   .project .description .year {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    display: block;
+    margin: 8px;
+    margin-left: 20px;
     font-family: "Open Sans Condensed", sans-serif;
-    color: #333;
-    text-align: right; }
-  .project .description p {
-    margin: 5px 0 0 15px;
+    font-size: 1.2em;
+    color: #0881a3; }
+  .project p {
+    margin-top: 5px;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
-    color: #3b3b3b; }
+    color: #333; }
+  .project img {
+    margin-top: 15px;
+    width: 100%; }
 
-img {
-  margin: 35px 0 0 0;
-  width: 100%; }
+.contact a {
+  display: block;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #00bbf0;
+  border-radius: 40px;
+  -webkit-transition: 150ms linear all;
+  transition: 150ms linear all; }
+  .contact a:hover {
+    background-color: #0881a3;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+.contact img {
+  max-width: 40px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%); }
+
+.credit {
+  margin-top: 50px;
+  font-size: 0.95em;
+  text-align: center; }
