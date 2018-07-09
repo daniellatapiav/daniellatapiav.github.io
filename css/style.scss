@@ -16,16 +16,23 @@ body {
 	width: 100vw;
 	font-family: $montserrat;
 	font-size: 12px;
-	font-weight: 400;
+	font-weight: 300;
 	color: $text-color;
 	overflow-x: hidden;
 }
 
 a { text-decoration: none; }
+b { font-weight: 400; }
+
+.row-break { width: 100%; }
 
 .main-header {
-	margin-top: 150px;
-  text-align: center;
+	background: {
+		image: url('../img/background.png');
+		attachment: fixed;
+		position: center center;
+		size: cover;
+	}
 
   h1 {
     margin: 0;
@@ -33,13 +40,15 @@ a { text-decoration: none; }
     font-size: 5em;
     text-transform: uppercase;
     line-height: 0.8em;
+		color: #fff;
+		text-shadow: 2px 2px 0px #000;
   }
 
   h2 {
     margin-bottom: 40px;
     font-size: 1.4em;
 		font-weight: 300;
-    color: $text-light-color;
+    color: #fff;
 
     span {
       display: inline-block;
@@ -59,7 +68,6 @@ a { text-decoration: none; }
     li {
       z-index: 2;
       margin: 0 10px;
-      background-color: #fff;
       transition: 150ms linear;
 
       a {
@@ -68,13 +76,14 @@ a { text-decoration: none; }
         font-family: $open-sans;
         font-size: 1.2em;
 				text-transform: uppercase;
-        color: #333;
+        color: #fff;
         letter-spacing: 1px;
       }
 
       &:hover {
-        text-shadow: 0.5px 0.5px 0px #fff, 1px 1px 0px $neon-blue;
-        transform: scale(1.08);
+				text-decoration: underline;
+        text-shadow: 1px 1px 0px $purple;
+        transform: scale(1.1);
         cursor: pointer;
       }
     }
@@ -92,37 +101,36 @@ a { text-decoration: none; }
 ::-webkit-scrollbar-track:horizontal { height: 3px; }
 
 .subsection {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
 	width: 100vw;
-	padding: 150px 0;
+	height: 100vh;
 	&.alternate { background-color: #efefef; }
+}
 
-	.content {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		margin: auto;
-		width: 80%;
-		max-width: 1200px;
-	}
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin: auto;
+	width: 80%;
+	max-width: 1200px;
 }
 
 h3.subtitle {
 	margin-top: 0;
 	margin-bottom: 80px;
+	width: 100%;
 	font-size: 2.5em;
 	text-align: center;
-
-	&::after {
-		display: block;
-		width: 80%;
-		border-bottom: 1px solid #333;
-	}
 }
 
 .bio {
 	p {
 		margin-left: 50px;
-		font-size: 1.5em;
+		font-size: 1.4em;
 		line-height: 2em;
 
 		a {
@@ -185,17 +193,19 @@ h3.subtitle {
 }
 
 .contact {
+	padding: 50px 0;
+
 	a {
 		display: block;
 		margin: 0 10px;
 		padding: 20px;
 		background-color: $neon-blue;
 		border-radius: 40px;
-		transition: 150ms linear all;
+		transition: 350ms linear all;
 
 		&:hover {
 			background-color: $purple;
-			transform: scale(1.1);
+			transform: scale(1.15) rotate(360deg);
 		}
 	}
 
@@ -206,7 +216,6 @@ h3.subtitle {
 }
 
 .credit {
-	margin-top: 50px;
 	font-size: 0.95em;
 	text-align: center;
 }
