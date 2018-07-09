@@ -6,7 +6,7 @@ $montserrat: 'Montserrat', sans-serif;
 
 $text-color: #333;
 $text-light-color: #666;
-$purple: #0881a3;
+$emerald: #0881a3;
 $neon-blue: #00bbf0;
 
 
@@ -23,9 +23,6 @@ body {
 
 a { text-decoration: none; }
 b { font-weight: 400; }
-
-// [class$="row-break"] { width: 100%; }
-
 
 .main-header {
 	height: 100vh !important;
@@ -190,8 +187,8 @@ h3.subtitle {
 			display: inline-block;
 			margin-top: 25px;
 			padding: 10px 30px;
-			color: $purple;
-			border: 2px solid $purple;
+			color: $emerald;
+			border: 2px solid $emerald;
 		}
 	}
 
@@ -227,7 +224,7 @@ h3.subtitle {
 			margin-left: 20px;
       font-family: $open-sans;
 			font-size: 1.1em;
-			color: $purple;
+			color: $emerald;
     }
   }
 
@@ -258,7 +255,7 @@ h3.subtitle {
 		transition: 350ms;
 
 		&:hover {
-			background-color: $purple;
+			background-color: $emerald;
 			transform: scale(1.15) rotate(360deg);
 		}
 	}
