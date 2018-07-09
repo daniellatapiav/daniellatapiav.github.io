@@ -2,36 +2,47 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title>Daniella Tapia V. | Desarrolladora</title>
-      <link href="css/normalize.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Daniella Tapia V.:: Diseño y Desarrollo</title>
   </head>
 
   <body>
 
     <header class="main-header subsection" id="#index">
-      <ul class="main-nav">
-        <li>
-          <a href="#index">
-            Inicio
-          </a>
-        </li>
-        <li>
-          <a href="#about">
-            Acerca de mí
-          </a>
-        </li>
-        <li>
-          <a href="#projects">
-            Proyectos
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            Contacto
-          </a>
-        </li>
-      </ul>
+      <input type="checkbox" id="open-nav">
+      <label for="open-nav" class="toggle-nav">
+        <span class="ion-navicon-round"></span>
+      </label>
+      <nav class="main-nav">
+        <label class="close-nav" for="open-nav">
+					<span class="ion-close"></span>
+				</label>
+        <ul>
+          <li>
+            <a href="#index">
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              Acerca de mí
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+              Proyectos
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
       <div class="row-break"></div>
       <h1>Daniella Tapia Villanes</h1>
       <div class="row-break"></div>
@@ -50,10 +61,9 @@
         Acerca de mí
       </h3>
 
-      <div class="row-break"></div>
-
       <div class="content bio">
         <img src="img/me.png" alt="Daniella Tapia Villanes">
+        <div class="row-break"></div>
         <p>¡Hola! Soy una desarrolladora web y Android <b>especializada en front-end</b>, pero también sé de back-end. Además, cuento con certificaciones en diseño web, diseño de productos digitales y marketing digital. Actualmente desempeño múltiples roles en un equipo de <b>Transformación Digital</b>, mientras curso una carrera de pregrado en <b>Ingeniería de Sistemas</b> durante los fines de semana.<br>
         <a href="files/TapiaDaniella_CV18.pdf" target="_blank">Descarga mi CV</a></p>
       </div>
@@ -86,7 +96,7 @@
         <article class="project">
           <div class="description">
             <h4>
-              Proyecto de Desarrollo Web Full-Stack
+              Proyecto de Desarrollo Full-Stack
             </h4>
             <span class="year">Digital House Argentina (2017)</span>
           </div>
@@ -112,7 +122,7 @@
           <img src="img/github.png" alt="GitHub">
         </a>
       </div>
-      <p class="credit">© 2018, Daniella Tapia Villanes. Todos los derechos reservados</p>
+      <p class="credit">© 2018, Daniella Tapia Villanes <br> Todos los derechos reservados</p>
     </section>
 
     <script src="js/jquery-3.3.1.min.js"></script>

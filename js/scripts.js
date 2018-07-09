@@ -3,5 +3,5 @@ $('a[href*="#"]').not('[href="#"]').click(function(event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: target.offset().top
-    }, 600);
+    } , 600);
   });
