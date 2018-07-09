@@ -28,19 +28,21 @@ b {
   background-size: cover; }
   .main-header h1,
   .main-header h2 {
-    padding: 0 45px; }
+    padding: 0 45px;
+    width: 100%; }
   .main-header h1 {
     margin: 0;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 3em;
+    font-size: 3.2em;
     text-transform: uppercase;
     line-height: 1em;
     color: #fff;
     text-shadow: 2px 2px 0px #000; }
   .main-header h2 {
     margin-bottom: 40px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 300;
+    line-height: 1.6em;
     color: #fff; }
     .main-header h2 span {
       display: inline-block;
